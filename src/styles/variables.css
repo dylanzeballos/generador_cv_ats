@@ -1,0 +1,25 @@
+/* Variables CSS para theming de plantillas */
+
+:root {
+  /* ATS Template Variables */
+  --ats-font-main: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --ats-color-text: #1a1a1a;
+  --ats-color-text-secondary: #4a4a4a;
+  --ats-color-border: #e5e5e5;
+  --ats-spacing-section: 1.5rem;
+  --ats-spacing-item: 1rem;
+  --ats-line-height: 1.6;
+}
+
+/* Harvard Template Variables */
+:root {
+  --harvard-font-main: ui-serif, Georgia, serif;
+  --harvard-font-heading: ui-sans-serif, system-ui, sans-serif;
+  --harvard-color-text: #2c2c2c;
+  --harvard-color-text-secondary: #5a5a5a;
+  --harvard-color-accent: #8b0000;
+  --harvard-color-border: #c9c9c9;
+  --harvard-spacing-section: 1.25rem;
+  --harvard-spacing-item: 0.875rem;
+  --harvard-line-height: 1.5;
+}

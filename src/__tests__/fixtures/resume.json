@@ -1,0 +1,46 @@
+{
+  "personalInfo": {
+    "fullName": "Ana Martínez García",
+    "email": "ana.martinez@email.com",
+    "phone": "+34 623 456 789",
+    "location": "Barcelona, España",
+    "linkedin": "https://linkedin.com/in/anamartinez",
+    "website": "https://anamartinez.dev",
+    "summary": "Ingeniera de software con 4 años de experiencia en desarrollo frontend. Especializada en React y TypeScript."
+  },
+  "experience": [
+    {
+      "id": "exp-1",
+      "company": "TechCorp Barcelona",
+      "position": "Frontend Developer",
+      "startDate": "2022-03",
+      "endDate": "",
+      "current": true,
+      "description": "Desarrollo de aplicaciones web modernas usando React y TypeScript.",
+      "achievements": ["Reduje el tiempo de carga en 30%", "Implementé CI/CD"]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "institution": "Universidad de Barcelona",
+      "degree": "Grado en Ingeniería Informática",
+      "field": "Software Engineering",
+      "startDate": "2017-09",
+      "endDate": "2021-06",
+      "current": false,
+      "graduationDate": "Junio 2021",
+      "gpa": "8.7/10"
+    }
+  ],
+  "skills": [
+    { "id": "skill-1", "name": "React", "level": "avanzado", "category": "Frontend" },
+    { "id": "skill-2", "name": "TypeScript", "level": "avanzado", "category": "Lenguajes" }
+  ],
+  "languages": [
+    { "id": "lang-1", "name": "Español", "level": "nativo" },
+    { "id": "lang-2", "name": "Inglés", "level": "avanzado" }
+  ],
+  "links": [{ "id": "link-1", "title": "GitHub", "url": "https://github.com/anamartinez" }],
+  "customSections": []
+}

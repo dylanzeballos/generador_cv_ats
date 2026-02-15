@@ -1,0 +1,206 @@
+/**
+ * Estilos para la plantilla ATS (Applicant Tracking System)
+ * 
+ * Diseño optimizado para:
+ * - Parseo por sistemas ATS
+ * - Legibilidad máxima
+ * - Estructura semántica clara
+ * - Sin elementos que confundan parsers
+ * 
+ * Características:
+ * - Fuentes estándar del sistema
+ * - Sin colores distractores
+ * - Jerarquía visual clara con espaciado
+ * - Formato cronológico inverso
+ */
+
+.ats-template {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  color: #1a1a1a;
+  line-height: 1.6;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 20mm;
+  background: white;
+}
+
+/* Header con información de contacto */
+.ats-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.ats-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #000;
+  letter-spacing: -0.02em;
+}
+
+.ats-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: #4a4a4a;
+}
+
+.ats-contact span,
+.ats-contact a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ats-contact a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.ats-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Secciones */
+.ats-section {
+  margin-bottom: 1.25rem;
+}
+
+.ats-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #d1d1d1;
+  color: #000;
+}
+
+/* Resumen profesional */
+.ats-text {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Items de experiencia y educación */
+.ats-item {
+  margin-bottom: 1rem;
+  break-inside: avoid;
+}
+
+.ats-item:last-child {
+  margin-bottom: 0;
+}
+
+.ats-item-header {
+  margin-bottom: 0.375rem;
+}
+
+.ats-item-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 0.125rem;
+}
+
+.ats-item-company {
+  font-weight: 500;
+  color: #333;
+}
+
+.ats-item-date {
+  font-size: 0.875rem;
+  color: #666;
+  margin-left: 0.5rem;
+}
+
+.ats-item-description {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 0.375rem;
+}
+
+/* Listas de logros */
+.ats-list {
+  list-style-type: disc;
+  padding-left: 1.25rem;
+  margin-top: 0.375rem;
+}
+
+.ats-list li {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+/* Habilidades */
+.ats-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.ats-skill {
+  font-size: 0.9375rem;
+  color: #333;
+}
+
+/* Idiomas */
+.ats-languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.ats-language {
+  font-size: 0.9375rem;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .ats-template {
+    padding: 1rem;
+  }
+
+  .ats-name {
+    font-size: 1.5rem;
+  }
+
+  .ats-contact {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .ats-template {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .ats-section {
+    break-inside: avoid;
+  }
+
+  .ats-item {
+    break-inside: avoid;
+  }
+}

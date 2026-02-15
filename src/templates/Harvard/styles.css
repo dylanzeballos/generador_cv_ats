@@ -1,0 +1,263 @@
+/**
+ * Estilos para la plantilla Harvard
+ * 
+ * Diseño inspirado en el formato de currículum de Harvard Business School:
+ * - Tipografía serif elegante
+ * - Uso estratégico de espacios en blanco
+ * - Líneas separadoras sutiles
+ * - Jerarquía tipográfica refinada
+ * - Enfoque en logros y resultados
+ * 
+ * Ideal para:
+ * - Sector financiero y consultoría
+ * - Posiciones ejecutivas
+ * - MBAs y posgrados
+ * - Mercado anglosajón
+ */
+
+.harvard-template {
+  font-family: 'Georgia', 'Times New Roman', ui-serif, serif;
+  color: #2c2c2c;
+  line-height: 1.5;
+  max-width: 210mm;
+  margin: 0 auto;
+  padding: 25mm;
+  background: white;
+}
+
+/* Header elegante */
+.harvard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #8b0000;
+}
+
+.harvard-name {
+  font-family: 'Georgia', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  color: #2c2c2c;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.harvard-contact {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8125rem;
+  color: #5a5a5a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+}
+
+.harvard-contact span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.harvard-contact a {
+  color: #8b0000;
+  text-decoration: none;
+  border-bottom: 1px dotted #8b0000;
+}
+
+.harvard-contact a:hover {
+  border-bottom: 1px solid #8b0000;
+}
+
+/* Secciones con líneas elegantes */
+.harvard-section {
+  margin-bottom: 1.75rem;
+}
+
+.harvard-section-header {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 0.875rem;
+  padding-bottom: 0.375rem;
+  border-bottom: 1px solid #c9c9c9;
+}
+
+.harvard-section-title {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #8b0000;
+  margin-right: 0.75rem;
+}
+
+.harvard-section-line {
+  flex: 1;
+  height: 1px;
+  background: #c9c9c9;
+  margin-top: 0.5rem;
+}
+
+/* Items de contenido */
+.harvard-item {
+  margin-bottom: 1.125rem;
+  break-inside: avoid;
+}
+
+.harvard-item:last-child {
+  margin-bottom: 0;
+}
+
+.harvard-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+}
+
+.harvard-item-left {
+  flex: 1;
+}
+
+.harvard-item-title {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin: 0;
+}
+
+.harvard-item-subtitle {
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: #5a5a5a;
+  margin-top: 0.125rem;
+}
+
+.harvard-item-date {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8125rem;
+  color: #5a5a5a;
+  font-weight: 400;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.harvard-item-description {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #333;
+  margin-top: 0.375rem;
+  text-align: justify;
+}
+
+/* Listas de logros */
+.harvard-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.5rem;
+}
+
+.harvard-list li {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 0.25rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.harvard-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #8b0000;
+}
+
+/* Resumen profesional */
+.harvard-summary {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+  font-style: italic;
+  padding: 0 0.5rem;
+}
+
+/* Habilidades */
+.harvard-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem 0.75rem;
+}
+
+.harvard-skill {
+  font-size: 0.9375rem;
+  color: #333;
+  padding: 0.125rem 0;
+}
+
+.harvard-skill:not(:last-child)::after {
+  content: '|';
+  margin-left: 0.75rem;
+  color: #c9c9c9;
+}
+
+/* Idiomas */
+.harvard-languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.harvard-language {
+  font-size: 0.9375rem;
+  color: #333;
+}
+
+.harvard-language strong {
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .harvard-template {
+    padding: 1.5rem;
+  }
+
+  .harvard-name {
+    font-size: 1.625rem;
+  }
+
+  .harvard-item-header {
+    flex-direction: column;
+  }
+
+  .harvard-item-date {
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  .harvard-template {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .harvard-section {
+    break-inside: avoid;
+  }
+
+  .harvard-item {
+    break-inside: avoid;
+  }
+
+  .harvard-section-title {
+    color: #8b0000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

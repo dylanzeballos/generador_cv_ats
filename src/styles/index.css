@@ -1,0 +1,188 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-secondary: #64748b;
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+}
+
+@layer base {
+  :root {
+    /* Template variables por defecto - usando hex para compatibilidad PDF */
+    --template-font-heading: var(--font-sans);
+    --template-font-body: var(--font-sans);
+    --template-color-primary: #000000;
+    --template-color-secondary: #666666;
+    --template-color-accent: #2563eb;
+    --template-spacing-section: 1.5rem;
+    --template-spacing-item: 0.75rem;
+  }
+
+  * {
+    @apply border-gray-200;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--template-font-heading);
+  }
+}
+
+@layer utilities {
+  .print-exact {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Clase especial para exportación PDF - fuerza colores compatibles */
+  .pdf-export-container {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .pdf-export-container * {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+  }
+}
+
+/* Estilos para impresión */
+@media print {
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+
+  .print-break-before {
+    break-before: page;
+  }
+}
+
+/* Fix para OKLCH - forzar colores hexadecimales en elementos críticos */
+.bg-gray-50 {
+  background-color: #f9fafb !important;
+}
+
+.bg-gray-100 {
+  background-color: #f3f4f6 !important;
+}
+
+.bg-gray-200 {
+  background-color: #e5e7eb !important;
+}
+
+.bg-blue-50 {
+  background-color: #eff6ff !important;
+}
+
+.bg-blue-100 {
+  background-color: #dbeafe !important;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6 !important;
+}
+
+.bg-blue-600 {
+  background-color: #2563eb !important;
+}
+
+.bg-blue-700 {
+  background-color: #1d4ed8 !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.border-gray-200 {
+  border-color: #e5e7eb !important;
+}
+
+.border-gray-300 {
+  border-color: #d1d5db !important;
+}
+
+.border-blue-500 {
+  border-color: #3b82f6 !important;
+}
+
+.border-blue-600 {
+  border-color: #2563eb !important;
+}
+
+.text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.text-gray-600 {
+  color: #4b5563 !important;
+}
+
+.text-gray-700 {
+  color: #374151 !important;
+}
+
+.text-gray-900 {
+  color: #111827 !important;
+}
+
+.text-blue-600 {
+  color: #2563eb !important;
+}
+
+.text-blue-700 {
+  color: #1d4ed8 !important;
+}
+
+.text-red-500 {
+  color: #ef4444 !important;
+}
+
+.text-red-600 {
+  color: #dc2626 !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.focus\:ring-blue-500:focus {
+  --tw-ring-color: #3b82f6 !important;
+}
+
+.focus\:border-blue-500:focus {
+  border-color: #3b82f6 !important;
+}

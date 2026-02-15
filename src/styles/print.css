@@ -1,0 +1,58 @@
+/* Estilos específicos para impresión de currículums */
+
+@media print {
+  /* Resetear márgenes y padding para impresión */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Asegurar que el contenido use todo el ancho disponible */
+  .cv-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Evitar que elementos se corten entre páginas */
+  .cv-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .cv-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Forzar saltos de página si es necesario */
+  .page-break {
+    break-before: page;
+    page-break-before: always;
+  }
+
+  /* Optimizar colores para impresión */
+  .print-black {
+    color: #000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Ocultar elementos no necesarios en impresión */
+  .no-print,
+  nav,
+  .sidebar,
+  .toolbar {
+    display: none !important;
+  }
+
+  /* Asegurar fondos blancos */
+  body,
+  .cv-page {
+    background: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
